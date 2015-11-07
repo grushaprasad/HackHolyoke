@@ -1,0 +1,15 @@
+import io.indico.api.Indico;
+import io.indico.api.IndicoResult;
+
+public class trial {
+  public static void main (String [] args) {
+    
+    
+    Indico indico = new Indico("9f4ce747d4eab117a262b1c3d5a6ad39");
+    IndicoResult single = indico.sentimentHQ.predict(
+                                                     "indico is so easy to use!"
+                                                    );
+    Double result = single.getSentiment();
+    System.out.println(result); 
+  }
+}
